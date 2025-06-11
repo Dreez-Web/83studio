@@ -4,36 +4,39 @@ import CardImage from "./CardImage.astro";
 
 <div id="galeria" class="overflow-hidden bg-gray-200 py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <!-- Encabezado -->
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="text-base font-semibold text-indigo-600">Deploy faster</h2>
       <p class="mt-2 text-4xl font-extrabold tracking-tight text-gray-800 sm:text-5xl">Proyectos desarrollados</p>
       <p class="mt-6 text-lg text-gray-600">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-        ratione.
+        razione.
       </p>
     </div>
 
-    <!-- Grid de tarjetas -->
     <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <CardImage
         title="E-Commerce Platform"
         subtitle="Desarrollo de plataforma de comercio electrónico"
         description="Plataforma robusta para gestionar ventas online."
-        image="/webs.webp"
-      />
+      >
+        <img slot="Imagen" src="/ideas.webp" alt="E-Commerce Platform" class="w-full h-auto object-cover" />
+      </CardImage>
+
       <CardImage
         title="Portfolio Website"
         subtitle="Diseño de sitio web personal"
-        description="Sitio web atractivo para mostrar proyectos personales."
-        image="/webs.webp"
-      />
+        description="Sitio web atractivo para mostrar proyectos personales y habilidades."
+      >
+        <img slot="Imagen" src="/camino.webp" alt="E-Commerce Platform" class="w-full h-auto object-cover" />
+      </CardImage>
+
       <CardImage
         title="Blog Platform"
         subtitle="Desarrollo de plataforma de blogs"
-        description="Sistema de gestión de contenido para blogs."
-        image="/webs.webp"
-      />
+        description="Sistema de gestión de contenido para blogs y publicaciones en línea."
+      >
+        <img slot="Imagen" src="/ideas.webp" alt="E-Commerce Platform" class="w-full h-auto object-cover" />
+      </CardImage>
     </div>
   </div>
 </div>

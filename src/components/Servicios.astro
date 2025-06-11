@@ -1,21 +1,43 @@
 ---
 import Card from "./Card.astro";
+import Pencil from "./icons/Pencil.astro";
+import SEO from "./icons/Seo.astro";
+import Comercio from "./icons/Comercio.astro";
+import Mantenimiento from "./icons/Mantenimiento.astro";
+
+
+
 ---
 
 <div id="servicios" class="bg-gray-50 py-24 sm:py-32">
-  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <h2 class="text-center text-base/7 font-semibold text-indigo-600">Tu sitio en internet</h2>
     <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-extrabold tracking-tight text-balance text-gray-800 sm:text-5xl">
       Todo lo que necesitas para tu negocio digital
     </p>
-    <div class="mt-16 grid max-w-lg grid-cols-1 gap-x-8 gap-y-10 sm:gap-y-16 lg:max-w-none lg:grid-cols-3">
-      <Card title="Diseño Web" subtitle="Creamos sitios web atractivos y funcionales." />
-      <Card title="Desarrollo Web" subtitle="Desarrollamos aplicaciones web personalizadas." />
-      <Card title="SEO" subtitle="Optimizamos tu sitio para mejorar su visibilidad en buscadores." />
-      <Card title="Marketing Digital" subtitle="Estrategias efectivas para aumentar tu presencia online." />
-      <Card title="E-commerce" subtitle="Soluciones completas para tu tienda online." />
-      <Card title="Mantenimiento Web" subtitle="Soporte continuo para asegurar el rendimiento de tu sitio." />
+
+    <!-- Contenedor principal con imagen a la izquierda y tarjetas a la derecha -->
+    <div class="mt-16 flex flex-col lg:flex-row items-center gap-12">
+      <!-- Imagen a la izquierda -->
+      <div class="w-full lg:w-1/2">
+        <img src="/ideas.webp" alt="Imagen representativa" class="w-full rounded-md h-auto" />
+      </div>
+
+      <!-- Tarjetas a la derecha: en grid 2x2 -->
+      <div class="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <Card title="Diseño Web" subtitle="Creamos sitios web atractivos y funcionales." >    
+            <Pencil slot="icon"/>
+        </Card>
+        <Card title="SEO" subtitle="Optimizamos tu sitio para mejorar su visibilidad en buscadores." >
+         <SEO slot="icon"/>
+        </Card>
+        <Card title="E-commerce" subtitle="Soluciones completas para tu tienda online." >
+           <Comercio slot="icon"/>
+        </Card>
+        <Card title="Mantenimiento Web" subtitle="Soporte continuo para asegurar el rendimiento de tu sitio." >
+           <Mantenimiento slot="icon"/>
+        </Card>
+      </div>
     </div>
-    <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
   </div>
 </div>

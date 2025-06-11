@@ -2,13 +2,19 @@
 import CardNumber from "./CardNumber.astro";
 ---
 
-<div id="proceso" class="bg-gray-50 py-24 sm:py-32">
-  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-    <h2 class="text-center text-base/7 font-semibold text-indigo-600">Metodologia de desarrollo</h2>
+<div id="proceso" class="relative bg-gray-50 py-24 sm:py-32 overflow-hidden">
+  <div
+    class="absolute inset-0 bg-center bg-no-repeat lg:bg-repeat-x lg:bg-center pointer-events-none opacity-30"
+    style="background-image: url('/camino.webp'); background-size: contain;"
+  >
+  </div>
+
+  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
+    <h2 class="text-center text-base/7 font-semibold text-indigo-600">Metodología de desarrollo</h2>
     <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-extrabold tracking-tight text-balance text-gray-800 sm:text-5xl">
       Nuestro proceso paso a paso
     </p>
-    <div class="mt-16 grid max-w-lg grid-cols-1 gap-x-8 gap-y-10 sm:gap-y-16 lg:max-w-none lg:grid-cols-3">
+    <div class="mt-16 grid max-w-lg grid-cols-1 gap-x-8 gap-y-10 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 relative z-10">
       <CardNumber number="01" title="Diseño Web" subtitle="Creamos sitios web atractivos y funcionales." />
       <CardNumber number="02" title="Desarrollo Web" subtitle="Desarrollamos aplicaciones web personalizadas." />
       <CardNumber number="03" title="SEO" subtitle="Optimizamos tu sitio para mejorar su visibilidad en buscadores." />
@@ -16,6 +22,5 @@ import CardNumber from "./CardNumber.astro";
       <CardNumber number="05" title="E-commerce" subtitle="Soluciones completas para tu tienda online." />
       <CardNumber number="06" title="Mantenimiento Web" subtitle="Soporte continuo para asegurar el rendimiento de tu sitio." />
     </div>
-    <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
   </div>
 </div>
