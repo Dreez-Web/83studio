@@ -9,35 +9,66 @@ import Mantenimiento from "./icons/Mantenimiento.astro";
 
 ---
 
-<div id="servicios" class="bg-gray-50 py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <h2 class="text-center text-base/7 font-semibold text-indigo-600">Tu sitio en internet</h2>
-    <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-extrabold tracking-tight text-balance text-gray-800 sm:text-5xl">
-      Todo lo que necesitas para tu negocio digital
+<section class="py-16 bg-gray-50"> {/* Fondo ligeramente diferente si quieres */}
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+    {/* Títulos Mejorados */}
+    <p class="text-base font-semibold text-indigo-600  tracking-wide">Tu Aliado Digital</p> {/* Subtítulo más impactante */}
+    <h2 class="mt-2 text-4xl font-extrabold text-gray-900 sm:text-5xl">
+      Todo lo que tu Negocio Necesita para Triunfar Online
+    </h2>
+    <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+      Desde la idea inicial hasta el crecimiento constante, construimos experiencias digitales que impulsan resultados.
     </p>
 
-    <!-- Contenedor principal con imagen a la izquierda y tarjetas a la derecha -->
-    <div class="mt-16 flex flex-col lg:flex-row items-center gap-12">
-      <!-- Imagen a la izquierda -->
-      <div class="w-full lg:w-1/2">
-        <img src="/ideas.webp" alt="Imagen representativa" class="w-full rounded-md h-auto" />
+    {/* Contenedor principal de la ilustración y las tarjetas - Centrado */}
+    <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-12">
+      {/* Ilustración (quizás más pequeña o más integrada) */}
+      <div class="md:w-1/2 flex justify-center items-center">
+        {/* Aquí puedes mantener tu ilustración o reemplazarla por una más abstracta de tu marca o un proceso */}
+        <img src="/ideas.webp" alt="Concepto de Soluciones Digitales" class="max-w-xs md:max-w-md w-full h-auto object-contain"/>
       </div>
 
-      <!-- Tarjetas a la derecha: en grid 2x2 -->
-      <div class="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <Card title="Diseño Web" subtitle="Creamos sitios web atractivos y funcionales." >    
-            <Pencil slot="icon"/>
-        </Card>
-        <Card title="SEO" subtitle="Optimizamos tu sitio para mejorar su visibilidad en buscadores." >
-         <SEO slot="icon"/>
-        </Card>
-        <Card title="E-commerce" subtitle="Soluciones completas para tu tienda online." >
-           <Comercio slot="icon"/>
-        </Card>
-        <Card title="Mantenimiento Web" subtitle="Soporte continuo para asegurar el rendimiento de tu sitio." >
-           <Mantenimiento slot="icon"/>
-        </Card>
+      {/* Grid de Tarjetas de Servicio */}
+      <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {/* Tarjeta 1: Diseño Web */}
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+          <span class="text-blue-500 mb-4">
+            {/* Ícono más grande y destacado */}
+            <svg class="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+          </span>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Diseño Web</h3>
+          <p class="text-gray-600 text-sm mb-4">Impacta desde el primer click. Creamos sitios web atractivos, funcionales y optimizados para convertir visitantes en clientes.</p>
+          {/* Opcional: <a href="#" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">Ver Servicio →</a> */}
+        </div>
+
+        {/* Tarjeta 2: SEO */}
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+          <span class="text-green-500 mb-4">
+            <svg class="h-12 w-12"  xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-map-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11 18l-2 -1l-6 3v-13l6 -3l6 3l6 -3v7.5" /><path d="M9 4v13" /><path d="M15 7v5" /><path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M20.2 20.2l1.8 1.8" /></svg>
+          </span>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">SEO</h3>
+          <p class="text-gray-600 text-sm mb-4">Llega a más clientes potenciales. Maximizamos tu visibilidad en buscadores para que tu negocio sea encontrado fácilmente.</p>
+        </div>
+
+        {/* Tarjeta 3: E-commerce */}
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+          <span class="text-purple-500 mb-4">
+            <svg class="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+          </span>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">E-commerce</h3>
+          <p class="text-gray-600 text-sm mb-4">Vende más y crece online. Desarrollamos tiendas virtuales seguras y fáciles de usar, diseñadas para disparar tus ventas.</p>
+        </div>
+
+        {/* Tarjeta 4: Mantenimiento Web */}
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+          <span class="text-red-500 mb-4">
+            <svg class="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          </span>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Mantenimiento Web</h3>
+          <p class="text-gray-600 text-sm mb-4">Tu sitio siempre a punto. Aseguramos el rendimiento, la seguridad y la actualización constante de tu plataforma.</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
