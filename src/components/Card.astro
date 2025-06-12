@@ -3,17 +3,17 @@ const { title, subtitle } = Astro.props;
 
 ---
 
-<div class="max-w-sm rounded-2xl border border-gray-200 bg-white p-6 shadow hover:shadow-lg transition-shadow duration-300 flex flex-col items-start">
+<div class="max-w-sm rounded-2xl border border-gray-200 bg-white p-6 shadow hover:shadow-lg transition-shadow duration-300 flex flex-col items-start  dark:bg-slate-900 dark:border-white dark:text-white">
   {/* Contenedor del Icono - Arriba */}
   <div class="mb-4 inline-flex items-center justify-center rounded-xl bg-blue-50 p-3 text-blue-600">
     <slot name="icon"></slot>
   </div>
 
   {/* Contenedor del Título y Subtítulo - Abajo del Icono */}
-  <h3 class="text-xl font-semibold text-gray-900 leading-tight mb-2">
+  <h3 class="text-xl font-semibold text-gray-900 leading-tight mb-2 dark:text-white">
     {title}
   </h3>
-  <p class="text-base text-gray-600">
+  <p class="text-base text-gray-600 dark:text-gray-300">
     {subtitle}
   </p>
 </div>
